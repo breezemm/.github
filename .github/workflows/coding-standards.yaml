@@ -7,7 +7,7 @@ on:
         default: "8.2"
         type: string
       message:
-        default: Fix code styling
+        default: "fix: code styling"
         type: string
       fix:
         default: true
