@@ -36,13 +36,11 @@ jobs:
         id: import-gpg
         uses: crazy-max/ghaction-import-gpg@v6
         with:
-          
           git_user_signingkey: true
           git_commit_gpgsign: true
-        env:
           GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
           PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-
+          
       - name: Commit linted files
         if: ${{ inputs.fix }}
         uses: stefanzweifel/git-auto-commit-action@v5
